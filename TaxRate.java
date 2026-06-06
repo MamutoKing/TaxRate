@@ -10,12 +10,12 @@ public class TaxRate {
 
         //Variables
         double weeklyIncome;
-        double taxRate = 0;
+        double taxRate;
         double taxAmount;
-        int bracket;
 
         try{
         // Prompt user for Income
+        System.out.println(" ");
             System.out.println("Enter your weekly income: ");
 
             weeklyIncome = scnr.nextDouble();
@@ -46,10 +46,12 @@ public class TaxRate {
             taxAmount = weeklyIncome * taxRate;
 
         //Display tax amount up to two decimal places
+            System.out.println(" ");
             System.out.printf("The weekly tax withholding is: $%.2f",  taxAmount);
+            System.out.println(" ");
         }
 
-        catch (inputMismatchException e){
+        catch (InputMismatchException e){
             System.out.println ("Error: Please enter a valid numeric value for income.");
         }
 
